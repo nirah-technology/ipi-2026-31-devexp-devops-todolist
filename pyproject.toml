@@ -1,0 +1,24 @@
+[project]
+name = "todolist"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Nicolas METIVIER",email = "nicolas.a.metivier@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.109.0",
+    "uvicorn>=0.27.0",
+    "pydantic>=2.0.0"
+]
+
+[tool.poetry]
+packages = [{include = "todolist", from = "src"}]
+
+[tool.poetry.scripts]
+main = "todolist.main:main"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
